@@ -1,12 +1,22 @@
-﻿<!doctype html>
-<html>
+﻿<html>
   <head>
     <title>CodeMirror: ECL mode</title>
     <link rel="stylesheet" href="../../lib/codemirror.css">
     <script src="../../lib/codemirror.js"></script>
     <script src="ecl.js"></script>
     <link rel="stylesheet" href="../../doc/docs.css">
-    <style>.CodeMirror {border: 1px solid black;}</style>
+    <style>
+.CodeMirror {border: 1px solid black;}
+.cm-s-default span.cm-comment { color: #008000; }
+.cm-s-default span.cm-keyword { color: #0000ff; }
+.cm-s-default span.cm-variable { font-weight: bold; color: #000080; }
+.cm-s-default span.cm-variable-2 { color: #800000; }
+.cm-s-default span.cm-variable-3 { color: #800000; }
+.cm-s-default span.cm-builtin { color: #800080; }
+.cm-s-default span.cm-string { color: #808080; }
+.cm-s-default span.cm-number, .cm-s-default span.cm-atom { color: #000000; }
+.cm-s-default span.cm-meta {color: #004080;}   
+    </style>
   </head>
   <body>
     <h1>CodeMirror: ECL mode</h1>
@@ -31,7 +41,7 @@ output(d);
     <script>
       var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
         tabMode: "indent",
-        matchBrackets: true,
+        matchBrackets: true
       });
     </script>
 
